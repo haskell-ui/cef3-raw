@@ -1,5 +1,4 @@
 [![Build Status][travis-icon]][travis]
-# About
 
 Haskell bindings to [cef3][cef3].
 
@@ -8,10 +7,16 @@ Haskell bindings to [cef3][cef3].
 ### Linux - Nix/NixOS
 
 If you don't have nix:
-> curl https://nixos.org/nix/install | sh
+
+```
+curl https://nixos.org/nix/install | sh
+```
 
 Otherwise
-> nix-build default.nix
+
+```
+nix-build default.nix
+```
 
 This will just build the bindings, if you rather do something useful
 you should check the [cef3-raw-example][example] repo.
@@ -25,7 +30,7 @@ beware.
 ### Windows, Mac
 TODO...
 
-[cef]: https://bitbucket.org/chromiumembedded/cef
+[cef3]: https://bitbucket.org/chromiumembedded/cef
 [example]: https://github.com/haskell-ui/cef3-raw-example
 [travis-icon]: https://travis-ci.org/haskell-ui/cef3-raw.svg?branch=master
 [travis]: https://travis-ci.org/haskell-ui/cef3-raw
