@@ -5,19 +5,24 @@
 , libcap, systemd
 }:
 
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   name = "libcef3-1750";
-  src  = ./cef_binary_3.1750.1805_linux64;
+  src = fetchurl {
+    url    = "https://github.com/haskell-ui/cef3-raw/releases/download/1750/cef_binary_3.1750.1805_linux64.tar.bz2";
+    sha256 = "0539c51490471abe52d170641bc0cadd214e998c887918d231accb160611ca4b";
+  };
 
   phases = [ "unpackPhase" "installPhase" ];
   installPhase = ''
-    mkdir -p $out/bin
+    mkdir -p $out/{bin,lib,include}
     mv Resources/* $out/bin/
+    mv Release/libcef.so $out/lib/
     mv Release/*   $out/bin/
+    mv include/*   $out/include/
 
     ln -s ${systemd.lib}/lib/libudev.so.1 $out/lib/libudev.so.0
 
-    patchelf --set-rpath "$out/lib:$rpath" $out/bin/libcef.so
+    patchelf --set-rpath "$out/lib:$rpath" $out/lib/libcef.so
     patchelf \
       --set-interpreter $(cat $NIX_CC/nix-support/dynamic-linker) \
       --set-rpath "$out/bin:$apath" $out/bin/chrome-sandbox
