@@ -1,6 +1,6 @@
 { stdenv, lib, fetchurl
 
-, alsaLib, dbus_glib, expat , gnome , nss, x11, xlibs , dbus, cups, nspr
+, alsaLib, dbus_glib, expat , gnome2, nss, x11, xlibs , dbus, cups, nspr
 , atk, cairo, freetype, fontconfig, gdk_pixbuf, glib, pango, libgcrypt_1_5
 , libcap, systemd
 }:
@@ -37,14 +37,14 @@ stdenv.mkDerivation rec {
 
   rpath = lib.makeLibraryPath [
     alsaLib dbus_glib expat
-    gnome.gtk nss x11 xlibs.libXrender
+    gnome2.gtk nss x11 xlibs.libXrender
     xlibs.libXtst xlibs.libXi xlibs.libXcomposite xlibs.libXfixes
     xlibs.libXdamage xlibs.libXcursor xlibs.libXext xlibs.libXrandr
     xlibs.libXScrnSaver
 
     dbus cups
     nspr xlibs.libX11 atk cairo freetype fontconfig
-    gdk_pixbuf glib pango gnome.GConf stdenv.cc.cc
+    gdk_pixbuf glib pango gnome2.GConf stdenv.cc.cc
 
     libgcrypt_1_5 libcap
   ];
