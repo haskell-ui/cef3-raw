@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/haskell-ui/cef3-raw.svg?branch=master)](https://travis-ci.org/haskell-ui/cef3-raw)
 # About
 
 Haskell bindings to cef3.
@@ -8,8 +9,6 @@ Haskell bindings to cef3.
 
 Download pre-build cef from [here][cef builds] (branch 1750) or build it
 yourself according to the instructions on the [cef project page][cef].
-TODO: Upload this build somewhere more convenient and automate this
-step in `libnix3.nix` with `fetchurl`.
 
 ### Windows, Mac
 TODO...
