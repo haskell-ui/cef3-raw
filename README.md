@@ -30,7 +30,13 @@ beware.
 ### Windows, Mac
 TODO...
 
+---
+
+Disclaimer: Big part of the current version of this bindings is based
+on the work done by Daniel Austin [here][bindings-cef3].
+
 [cef3]: https://bitbucket.org/chromiumembedded/cef
 [example]: https://github.com/haskell-ui/cef3-raw-example
 [travis-icon]: https://travis-ci.org/haskell-ui/cef3-raw.svg?branch=master
 [travis]: https://travis-ci.org/haskell-ui/cef3-raw
+[bindings-cef3]: https://github.com/fluffynukeit/bindings-cef3
