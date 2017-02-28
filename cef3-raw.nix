@@ -12,6 +12,7 @@ mkDerivation {
     "--extra-include-dirs=${libcef3}/include/"
     "--extra-include-dirs=${libcef3}/include/capi/"
   ];
+  passthru = { inherit libcef3; };
   description = "Raw CEF3 bindings";
   license = stdenv.lib.licenses.bsd3;
 }
