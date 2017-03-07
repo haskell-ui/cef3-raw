@@ -1,0 +1,15 @@
+
+version: "{build}-{branch}"
+skip_tags: true
+environment:
+  global:
+    STACK_ROOT: C:\sr
+
+build: off
+
+init:
+  - curl -ostack.zip -L --insecure http://www.stackage.org/stack/windows-i386
+  - 7z x stack.zip stack.exe
+
+build_script:
+  - stack setup
