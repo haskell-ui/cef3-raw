@@ -12,4 +12,4 @@ install:
   - 7z x stack.zip stack.exe
 
 build_script:
-  - stack setup
+  - stack setup --no-terminal > nul
