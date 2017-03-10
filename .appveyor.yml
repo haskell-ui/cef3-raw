@@ -11,7 +11,7 @@ install:
   - curl -ostack.zip -L --insecure http://www.stackage.org/stack/windows-i386
   - 7z x stack.zip stack.exe
   - dir
-  - curl -L https://github.com/haskell-ui/cef3-raw/releases/download/1750win64/cef1750_win64.7z
+  - curl -ocef1750_win64.7z -L https://github.com/haskell-ui/cef3-raw/releases/download/1750win64/cef1750_win64.7z
   - 7z x cef1750_win64.7z
   - dir
 
