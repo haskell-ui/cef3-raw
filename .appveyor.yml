@@ -17,4 +17,4 @@ install:
 
 build_script:
   - stack setup --no-terminal > nul
-  - stack build
+  - stack build --extra-lib-dirs="C:\projects\cef3-raw\cef\Release" --extra-include-dirs="C:\projects\cef3-raw\cef" --extra-include-dirs="C:\projects\cef3-raw\cef\include"  --extra-include-dirs="C:\projects\cef3-raw\cef\include\capi"

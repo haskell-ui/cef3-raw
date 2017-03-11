@@ -1,8 +1,2 @@
 resolver: lts-8.4
 
-extra-include-dirs:
-  - ./cef/
-  - ./cef/include
-  - ./cef/include/capi
-extra-lib-dirs:
-  - ./cef/Release
