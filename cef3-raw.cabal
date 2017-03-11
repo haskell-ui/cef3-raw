@@ -68,7 +68,8 @@ Library
                       Bindings.CEF3.Internal.CefTime
                       Bindings.CEF3.Internal.CefTypesLinux
 
-  pkgconfig-depends:  gtk+-2.0
+  if os(linux)
+    pkgconfig-depends:  gtk+-2.0
   extra-libraries:    cef
 
   -- suppressing all warnings for now since neither -Wno-format
