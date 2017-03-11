@@ -66,7 +66,10 @@ Library
                       Bindings.CEF3.Internal.CefStringMultimap
                       Bindings.CEF3.Internal.CefTypes
                       Bindings.CEF3.Internal.CefTime
-                      Bindings.CEF3.Internal.CefTypesLinux
+  if os(linux)
+        other-modules: Bindings.CEF3.Internal.CefTypesLinux
+  if os(windows)
+        other-modules: Bindings.CEF3.Internal.CefTypesWin
 
   if os(linux)
     pkgconfig-depends:  gtk+-2.0
