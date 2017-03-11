@@ -1,0 +1,7 @@
+
+extra-include-dirs:
+  - cef/
+  - cef/include
+  - cef/include/capi
+extra-lib-dirs:
+  - cef/Release
