@@ -1,3 +1,4 @@
+resolver: lts-8.4
 
 extra-include-dirs:
   - cef/
