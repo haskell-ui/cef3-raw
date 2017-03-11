@@ -6,6 +6,7 @@
 #include "include/internal/cef_string.h"
 module Bindings.CEF3.Internal.CefTypesWin where
 import Foreign.Ptr
+import Bindings.CEF3.Internal.CefString
 #strict_import
 
 #opaque_t INSTANCE
@@ -47,7 +48,7 @@ import Foreign.Ptr
 
 #starttype cef_window_info_t
 #field ex_style, CInt
-#field window_name, <cef_string_t>
+#field window_name, <cef_string_utf16_t>
 #field style, CInt
 #field x, CInt
 #field y, CInt
