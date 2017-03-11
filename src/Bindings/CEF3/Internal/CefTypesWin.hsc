@@ -9,18 +9,17 @@ import Foreign.Ptr
 #strict_import
 
 #opaque_t HINSTANCE
+#synonym_t cef_instance_handle_t, HINSTANCE
 
 {- typedef struct _cef_main_args_t {
         HINSTANCE instance;
    } cef_main_args_t; -}
 #starttype cef_main_args_t
-#field instance , HINSTANCE
+#field instance , cef_instance_handle_t
 #stoptype
 
 #opaque_t HMENU
-
-#synonym_t DWORD, CInt
-#synonym_t BOOL, CInt
+#synonym_t cef_menu_handle_t, HMENU
 
 #opaque_t HCURSOR
 #opaque_t MSG
@@ -47,16 +46,16 @@ import Foreign.Ptr
 } cef_window_info_t; -}
 
 #starttype cef_window_info_t
-#field ex_style, DWORD
+#field ex_style, CInt
 #field window_name, cef_string_t
-#field style, DWORD
-#field x, int
-#field y, int
-#field width, int
-#field height, int
+#field style, CInt
+#field x, CInt
+#field y, CInt
+#field width, CInt
+#field height, CInt
 #field parent_window, cef_window_handle_t
-#field menu, HMENU
-#field window_rendering_disabled, BOOL
-#field transparent_painting, BOOL
+#field menu, cef_menu_handle_t
+#field window_rendering_disabled, CInt
+#field transparent_painting, CInt
 #field window, cef_window_handle_t
 #stoptype
