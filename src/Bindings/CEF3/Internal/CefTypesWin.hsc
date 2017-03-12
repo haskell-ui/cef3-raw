@@ -7,28 +7,22 @@
 module Bindings.CEF3.Internal.CefTypesWin where
 import Foreign.Ptr
 import Bindings.CEF3.Internal.CefString
+import System.Win32.Types
+import Graphics.Win32.GDI.Types
 #strict_import
-
-#opaque_t INSTANCE
-#synonym_t cef_instance_handle_t, Ptr <INSTANCE>
 
 {- typedef struct _cef_main_args_t {
         HINSTANCE instance;
    } cef_main_args_t; -}
 #starttype cef_main_args_t
-#field instance , <cef_instance_handle_t>
+#field instance , HINSTANCE
 #stoptype
 
-#opaque_t MENU
-#synonym_t cef_menu_handle_t, Ptr <MENU>
-
-#opaque_t CURSOR
 #opaque_t MSG
-#opaque_t WND
 
-#synonym_t cef_cursor_handle_t, Ptr <CURSOR>
+#synonym_t cef_cursor_handle_t, HCURSOR
 #synonym_t cef_event_handle_t,  Ptr <MSG>
-#synonym_t cef_window_handle_t, Ptr <WND>
+#synonym_t cef_window_handle_t, HWND
 #synonym_t cef_text_input_context_t, Ptr ()
 
 {- typedef struct _cef_window_info_t {
@@ -47,16 +41,16 @@ import Bindings.CEF3.Internal.CefString
 } cef_window_info_t; -}
 
 #starttype cef_window_info_t
-#field ex_style, CInt
+#field ex_style, DWORD
 #field window_name, <cef_string_utf16_t>
-#field style, CInt
+#field style, DWORD
 #field x, CInt
 #field y, CInt
 #field width, CInt
 #field height, CInt
 #field parent_window, <cef_window_handle_t>
-#field menu, <cef_menu_handle_t>
-#field window_rendering_disabled, CInt
-#field transparent_painting, CInt
+#field menu, HMENU
+#field window_rendering_disabled, BOOL
+#field transparent_painting, BOOL
 #field window, <cef_window_handle_t>
 #stoptype
