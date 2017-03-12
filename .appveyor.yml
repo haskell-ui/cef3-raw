@@ -1,5 +1,5 @@
 
-version: "{build}-{branch}"
+version: "branch-{branch}-build-nr-{build}"
 skip_tags: true
 environment:
   global:
@@ -10,11 +10,9 @@ build: off
 install:
   - curl -ostack.zip -L --insecure http://www.stackage.org/stack/windows-i386
   - 7z x stack.zip stack.exe
-  - curl -ocef1750_win64.7z -L https://github.com/haskell-ui/cef3-raw/releases/download/1750win64/cef1750_win64.7z
-  - 7z x cef1750_win64.7z
-  - rename cef1750_win64 cef
-  - dir
 
 build_script:
-  - stack setup --skip-msys --no-terminal > NUL
-  - stack build --extra-lib-dirs="C:\projects\cef3-raw\cef\Release" --extra-include-dirs="C:\projects\cef3-raw\cef" --extra-include-dirs="C:\projects\cef3-raw\cef\include"  --extra-include-dirs="C:\projects\cef3-raw\cef\include\capi"
+  - scripts/build.bat
+
+cache:
+  - C:\sr -> .appveyor.yml
