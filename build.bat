@@ -4,6 +4,7 @@ curl -ocef1750_win64.7z -L https://github.com/haskell-ui/cef3-raw/releases/downl
 rename cef1750_win64 cef
 stack setup --skip-msys --no-terminal > NUL
 set tp=%cd%\cef
+@echo %tp%
 stack build^
   --extra-lib-dirs="%tp%\Release"^
   --extra-include-dirs="%tp%"^

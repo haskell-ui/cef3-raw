@@ -12,6 +12,7 @@ install:
   - 7z x stack.zip stack.exe
 
 build_script:
+  - dir
   - .\scripts\build.bat
 
 cache:
