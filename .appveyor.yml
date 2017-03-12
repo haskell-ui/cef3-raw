@@ -12,7 +12,7 @@ install:
   - 7z x stack.zip stack.exe
 
 build_script:
-  - scripts/build.bat
+  - scripts\build.bat
 
 cache:
   - C:\sr -> .appveyor.yml
