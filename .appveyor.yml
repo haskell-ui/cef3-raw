@@ -5,6 +5,10 @@ environment:
   global:
     STACK_ROOT: C:\sr
 
+skip_commits:
+  files:
+    - '**\*.md'
+
 build: off
 
 install:
