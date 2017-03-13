@@ -10,9 +10,9 @@ build: off
 install:
   - curl -ostack.zip -L --insecure http://www.stackage.org/stack/windows-i386
   - 7z x stack.zip stack.exe
+  - .\scripts\setup.bat
 
 build_script:
-  - dir
   - .\scripts\build.bat
 
 cache:
