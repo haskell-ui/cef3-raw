@@ -1,7 +1,7 @@
 
 if "%CEF3_PATH%" == "" (
    setx CEF3_PATH "C:\cef3-dev"
-   set CEF3_PATH "C:\cef3-dev"
+   set CEF3_PATH=C:\cef3-dev
 )
 if exist "%CEF3_PATH%" (goto :Done)
 
