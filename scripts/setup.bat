@@ -1,5 +1,8 @@
 
-if "%CEF3_PATH%" == "" (setx /M CEF3_PATH "C:\cef3-dev")
+if "%CEF3_PATH%" == "" (
+   setx CEF3_PATH "C:\cef3-dev"
+   set CEF3_PATH "C:\cef3-dev"
+)
 if exist "%CEF3_PATH%" (goto :Done)
 
 curl -ocef1750_win64.7z -L https://github.com/haskell-ui/cef3-raw/releases/download/1750win64/cef1750_win64.7z
@@ -10,7 +13,7 @@ del cef1750_win64.7z
 
 dir
 
-echo %CEF3_PATH%
+echo CEF3_PATH: %CEF3_PATH%
 dir %CEF3_PATH%
 
 :Done
