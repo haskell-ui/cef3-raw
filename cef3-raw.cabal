@@ -75,6 +75,7 @@ Library
     other-modules:      Bindings.CEF3.Internal.CefTypesWin
     extra-libraries:    libcef
     build-depends:      Win32
+    ghc-options:       -DBINDINGS_STDCALLCONV
 
   -- suppressing all warnings for now since neither -Wno-format
   -- nor -Wformat=0 seem to work
