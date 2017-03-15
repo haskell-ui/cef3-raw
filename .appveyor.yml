@@ -12,8 +12,8 @@ skip_commits:
 build: off
 
 install:
-  - curl -ostack.zip -L --insecure http://www.stackage.org/stack/windows-i386
-  - 7z x stack.zip stack.exe
+  - curl -ostack.zip -L --insecure http://www.stackage.org/stack/windows-x86_64
+  - 7z x stack.zip stack.exe > NUL
   - .\scripts\setup.bat
 
 build_script:
