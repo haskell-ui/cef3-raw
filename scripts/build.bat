@@ -5,7 +5,7 @@ if "%CEF3_PATH%" == "" (
 )
 
 stack setup --skip-msys --no-terminal > NUL
-stack build^
+stack install^
   --extra-lib-dirs="%CEF3_PATH%\Release"^
   --extra-include-dirs="%CEF3_PATH%"^
   --extra-include-dirs="%CEF3_PATH%\include"^
