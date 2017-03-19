@@ -42,6 +42,6 @@ on the work done by Daniel Austin [here][bindings-cef3].
 [linux-build-icon]: https://img.shields.io/travis/haskell-ui/cef3-raw/master.svg?label=Linux%20build
 [linux-build]: https://travis-ci.org/haskell-ui/cef3-raw
 [mac-build-icon]: https://img.shields.io/badge/Mac%20build-TODO-lightgrey.svg
-[mac-build]: https://github.com/haskell-ui/cef3-raw-example
-[windows-build-icon]: https://img.shields.io/appveyor/ci/haskell-ui/cef3-raw/master.svg?label=Windows%20build
-[windows-build]: https://github.com/haskell-ui/cef3-raw-example
+[mac-build]: https://github.com/haskell-ui/cef3-raw
+[windows-build-icon]: https://img.shields.io/appveyor/ci/MaxOw/cef3-raw/master.svg?label=Windows%20build
+[windows-build]: https://ci.appveyor.com/project/MaxOw/cef3-raw
