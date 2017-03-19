@@ -8,8 +8,9 @@ import Foreign.Ptr
 #strict_import
 
 #if defined(OS_WIN)
-#synonym_t char16 , <wchar_t>
+#synonym_t char16 , CUShort
 #else
+-- should be CUInt
 #synonym_t char16 , CUShort
 #ifndef WCHAR_T_IS_UTF32
 #define WCHAR_T_IS_UTF32

@@ -1,0 +1,23 @@
+
+version: "branch-{branch}-build-nr-{build}"
+skip_tags: true
+environment:
+  global:
+    STACK_ROOT: C:\sr
+
+skip_commits:
+  files:
+    - '**\*.md'
+
+build: off
+
+install:
+  - curl -s -ostack.zip -L --insecure http://www.stackage.org/stack/windows-x86_64
+  - 7z x stack.zip stack.exe > NUL
+  - .\scripts\setup.bat
+
+build_script:
+  - .\scripts\build.bat
+
+cache:
+  - C:\sr -> .appveyor.yml

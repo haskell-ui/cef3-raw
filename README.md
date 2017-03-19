@@ -1,4 +1,4 @@
-[![Build Status][travis-icon]][travis]
+[![Linux Build Status][linux-build-icon]][linux-build]  [![Mac Build Status][mac-build-icon]][mac-build]  [![Windows Build Status][windows-build-icon]][windows-build]
 
 Haskell bindings to [cef3][cef3].
 
@@ -37,6 +37,11 @@ on the work done by Daniel Austin [here][bindings-cef3].
 
 [cef3]: https://bitbucket.org/chromiumembedded/cef
 [example]: https://github.com/haskell-ui/cef3-raw-example
-[travis-icon]: https://travis-ci.org/haskell-ui/cef3-raw.svg?branch=master
-[travis]: https://travis-ci.org/haskell-ui/cef3-raw
 [bindings-cef3]: https://github.com/fluffynukeit/bindings-cef3
+
+[linux-build-icon]: https://img.shields.io/travis/haskell-ui/cef3-raw/master.svg?label=Linux%20build
+[linux-build]: https://travis-ci.org/haskell-ui/cef3-raw
+[mac-build-icon]: https://img.shields.io/badge/Mac%20build-TODO-lightgrey.svg
+[mac-build]: https://github.com/haskell-ui/cef3-raw-example
+[windows-build-icon]: https://img.shields.io/appveyor/ci/haskell-ui/cef3-raw/master.svg?label=Windows%20build
+[windows-build]: https://github.com/haskell-ui/cef3-raw-example
