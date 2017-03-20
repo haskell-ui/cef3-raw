@@ -17,7 +17,9 @@ install:
   - .\scripts\setup.bat
 
 build_script:
-  - .\scripts\build.bat
+  - stack setup --skip-msys --no-terminal > NUL
+  - .\scripts\configure.bat
+  - stack build
 
 cache:
   - C:\sr -> .appveyor.yml

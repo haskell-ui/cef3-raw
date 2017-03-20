@@ -27,7 +27,34 @@ I will add this package to nixpkgs in the future so you will be able
 to automatically download it prebuild from binary caches, but for now
 beware.
 
-### Windows, Mac
+### Windows - Stack
+
+You will need to have stack, curl and 7zip installed and in your PATH
+for `setup.bat` to work.
+
+```
+.\scripts\setup.bat
+```
+This will download cef lib and place it in `C:\cef3-dev`
+
+```
+stack setup
+.\scripts\configure.bat
+```
+
+The `configure.bat` will point stack to where `setup.bat` installed
+the library.
+
+Alternatively if you already have cef (branch 1750) installed
+somewhere you can just point the configure in that direction:
+
+```
+.\scripts\configure.bat <path-to-cef>
+```
+
+Finally run `stack install` and you're golden.
+
+### Mac
 TODO...
 
 ---
