@@ -4,6 +4,27 @@ Haskell bindings to [cef3][cef3].
 
 ## Installation
 
+If you use nix or if you are on windows - see the specific subsections below.
+
+Here is a general gist if you'd like to do it in some alternative way.
+
+First you will need libcef (branch 1750) installed somewhere on your machine.
+For linux or windows 64bit you can download it from the release page of this
+repo. Alternatively you can build it [from source][cef3] if you prefer.
+
+Next you will need to tell ghc where the required lib and include dirs are, with
+cabal you can do it like so:
+
+```
+cabal configure \
+  --extra-lib-dirs="<cef3-location>/Release" \
+  --extra-include-dirs="<cef3-location>" \
+  --extra-include-dirs="<cef3-location>/include" \
+  --extra-include-dirs="<cef3-location>/include/capi"
+```
+
+Then you should be able to install and use it.
+
 ### Linux - Nix/NixOS
 
 If you don't have nix:
@@ -59,8 +80,8 @@ TODO...
 
 ---
 
-Disclaimer: Big part of the current version of this bindings is based
-on the work done by Daniel Austin [here][bindings-cef3].
+Disclaimer: This bindings are based on the one done by Daniel Austin
+[here][bindings-cef3].
 
 [cef3]: https://bitbucket.org/chromiumembedded/cef
 [example]: https://github.com/haskell-ui/cef3-raw-example
