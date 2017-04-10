@@ -1,6 +1,9 @@
 [![Linux Build Status][linux-build-icon]][linux-build]  [![Mac Build Status][mac-build-icon]][mac-build]  [![Windows Build Status][windows-build-icon]][windows-build]
 
-Haskell bindings to [cef3][cef3].
+Haskell bindings to [cef3].
+
+There is also a WIP [cef3-simple] for some higher level functionality of some
+common tasks. For usage example you can check the [cef3-example] repo.
 
 ## Installation
 
@@ -38,9 +41,6 @@ Otherwise
 ```
 nix-build default.nix
 ```
-
-This will just build the bindings, if you rather do something useful
-you should check the [cef3-raw-example][example] repo.
 
 Beware:
 It takes about 20min and ~800M ram to build it on my machine.
@@ -85,6 +85,8 @@ Disclaimer: This bindings are based on the one done by Daniel Austin
 
 [cef3]: https://bitbucket.org/chromiumembedded/cef
 [example]: https://github.com/haskell-ui/cef3-raw-example
+[cef3-simple]: https://github.com/haskell-ui/cef3-simple
+[cef3-example]: https://github.com/haskell-ui/cef3-example
 [bindings-cef3]: https://github.com/fluffynukeit/bindings-cef3
 
 [linux-build-icon]: https://img.shields.io/travis/haskell-ui/cef3-raw/master.svg?label=Linux%20build
