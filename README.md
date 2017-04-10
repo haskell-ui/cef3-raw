@@ -13,7 +13,7 @@ Here is a general gist if you'd like to do it in some alternative way.
 
 First you will need libcef (branch 1750) installed somewhere on your machine.
 For linux or windows 64bit you can download it from the release page of this
-repo. Alternatively you can build it [from source][cef3] if you prefer.
+repo. Alternatively you can build it [from source][cef3-1750] if you prefer.
 
 Next you will need to tell ghc where the required lib and include dirs are, with
 cabal you can do it like so:
@@ -80,10 +80,11 @@ TODO...
 
 ---
 
-Disclaimer: This bindings are based on the one done by Daniel Austin
+Disclaimer: This bindings are based on one done by Daniel Austin
 [here][bindings-cef3].
 
 [cef3]: https://bitbucket.org/chromiumembedded/cef
+[cef3-1750]: https://bitbucket.org/chromiumembedded/cef/branch/1750
 [example]: https://github.com/haskell-ui/cef3-raw-example
 [cef3-simple]: https://github.com/haskell-ui/cef3-simple
 [cef3-example]: https://github.com/haskell-ui/cef3-example
