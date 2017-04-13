@@ -10,6 +10,11 @@ Category:            FFI
 Build-Type:          Simple
 Cabal-Version:       >=1.10
 
+Description:
+  Raw bindings to <https://bitbucket.org/chromiumembedded/cef CEF3> (Chromium
+  Embedded Framework). For more info and installation instructions see the
+  <https://github.com/haskell-ui/cef3-raw/blob/master/README.md README>
+
 Source-Repository head
   type:     git
   location: https://github.com/haskell-ui/cef3-raw.git
@@ -20,7 +25,7 @@ Library
   default-extensions: ForeignFunctionInterface
   build-tools:        hsc2hs
 
-  build-depends:      base         >= 4.7
+  build-depends:      base         >= 4.7    && < 5.0
                ,      bindings-DSL >= 1.0.16 && < 1.1
 
   exposed-modules:    Bindings.CEF3
@@ -75,7 +80,8 @@ Library
     other-modules:      Bindings.CEF3.Internal.CefTypesWin
     extra-libraries:    libcef
     build-depends:      Win32
-    ghc-options:       -DBINDINGS_STDCALLCONV
+    -- Is this really needed? (TODO: Investigate)
+    cpp-options:       -DBINDINGS_STDCALLCONV
 
   -- suppressing all warnings for now since neither -Wno-format
   -- nor -Wformat=0 seem to work
